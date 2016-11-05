@@ -3,6 +3,19 @@
 	font-size: 5em;
 }
 
+h1 {
+	color: #053162;
+	font-weight: bold;
+}
+
+.blue {
+	color: #053162;
+}
+
+.center {
+	text-align: center;
+}
+
 .welcome {
 	color: #053162;
 	margin: 20px auto;
@@ -16,7 +29,30 @@
 	margin: 10px auto;
 }
 
-.welcome .btn {
+ul {
+	list-style: none;
+}
+
+#start {
+	width: 250px;
+	margin: 10px auto;
+}
+
+#quest {
+	width: 250px;
+	margin: 10px auto;
+}
+
+#hashtag {
+	width: 250px;
+	margin: 10px auto;
+}
+
+.push-down {
+	margin-top: 100px;
+}
+
+.btn {
 	background-color: #053162;
 	color: white;
 	padding:10px 100px;

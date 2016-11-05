@@ -1,11 +1,13 @@
-<h1>It's Dangerous To Go Alone! Take Friends!</h1>
+<div class="col-sm-8 col-sm-offset-2 push-down blue center">
+  <h1>It's Dangerous To Go Alone! Take Friends!</h1>
 
-<form method="POST" action="twitter/fake-oauth">
-    <p>
-        If you'd like to work with your friends to slay the burrito monster, {{name}}, you need to add your Twitter account!
-    </p>
+  <form method="POST" action="twitter/fake-oauth">
+      <p class="lead">
+          If you'd like to work with your friends to slay the burrito monster, {{name}}, you need to add your Twitter account!
+      </p>
 
-    <input type="text" id="twitter-handle" placeholder="@yr_twitter_handle" />
-    <br/>
-    <input type="submit"/>
-</form>
+      <input type="text" id="twitter-handle" placeholder="@yr_twitter_handle" />
+      <br/><br>
+      <input type="submit", class='btn btn-primary btn-lg'/>
+  </form>
+</div>

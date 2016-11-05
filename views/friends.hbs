@@ -1,13 +1,15 @@
-<h1>Keep Your Friends Close...</h1>
+<div class="col-sm-8 col-sm-offset-2 push-down blue">
+  <h1>Keep Your Friends Close...</h1>
 
-<h2>Select up to 9 friend to band together and try to defeat the Burrito Monster!</h2>
+  <h2>Select up to 9 friend to band together and try to defeat the Burrito Monster!</h2>
 
-<form method="POST" action="dashboard">
-    <ul id="picker">
-        {{#each friends}}
-            <li><label><input type="checkbox" id="{{this.id}}" name="friends" value="{{this.value}}">{{this.name}}</label></li>
-        {{/each}}
-    </ul>
+  <form method="POST" action="dashboard">
+      <ul id="picker">
+          {{#each friends}}
+              <li><label><input type="checkbox" id="{{this.id}}" name="friends" value="{{this.value}}">{{this.name}}</label></li>
+          {{/each}}
+      </ul>
 
-    <input type="submit" value="LET'S SLAY!" />
-</form>
+      <input type="submit" value="LET'S SLAY!" class='col-sm-6 col-sm-offset-3 btn btn-primary btn-lg' />
+  </form>
+</div>

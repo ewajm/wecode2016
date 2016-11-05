@@ -1,19 +1,22 @@
-<h1> Pick your Quest:</h1>
-<form action="/friends" method="post">
-  <div class="form-group">
-    <select class='form-control' name='quest' id='quest'>
-      <option value='1'>Daily Quest</option>
-      <option value='7'>Weekly Quest</option>
-      <option value="2">Challenge mode: Weekend (2x points!)</option>
-    </select>
-  </div>
-  <div class="form-group">
-    <label for="start">Pick your start date:</label>
-    <input type="date" name="start" id='start'  class='form-control'>
-  </div>
-  <div class="form-group">
-    <label for="hashtag">Give your quest a kickin' hashtag:</label>
-    <input type="text" name="hashtag" id="hashtag" class="form-control">
-  </div>
-  <button type="submit" name="button">Confirm</button>
-</form>
+<div class="col-sm-8 col-sm-offset-2 push-down blue center">
+  <h1> Build your Quest:</h1>
+  <form action="/friends" method="post">
+    <div class="form-group">
+      <label for="start">Choose a timeframe:</label>
+      <select class='form-control' name='quest' id='quest'>
+        <option value='1'>Daily Quest</option>
+        <option value='7'>Weekly Quest</option>
+        <option value="2">Challenge mode: Weekend (2x points!)</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="start">Pick your start date:</label>
+      <input type="date" name="start" id='start'  class='form-control'>
+    </div>
+    <div class="form-group">
+      <label for="hashtag">Give your quest a kickin' hashtag:</label>
+      <input type="text" name="hashtag" id="hashtag" class="form-control" placeholder="#destroyburritomonster">
+    </div>
+    <button type="submit", class='btn btn-primary btn-lg', name="button">Confirm</button>
+  </form>
+</div>
