@@ -5,7 +5,6 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-// routing
 var index     = require('./routes/index');
 var twitter   = require('./routes/twitter');
 var join      = require('./routes/join');
@@ -29,6 +28,18 @@ app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
+
+// routes
+app.use('/', index);
+app.use('/twitter', twitter);
+app.use('/join', join);
+app.use('/twitter', twitter);
+app.use('/pick', pick);
+app.use('/friends', friends);
+app.use('/dashboard', dashboard);
+app.use('/quest', quest);
+app.use('/add', add);
+app.use('/end', end);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
