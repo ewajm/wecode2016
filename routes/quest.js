@@ -12,8 +12,14 @@ router.get('/:quest', function(req, res, next) {
   var sesh = req.session;
 
   var quest = req.session.quests.find(rightQuest);
+  var displayHp = parseInt(quest.hp);
+  if(quest.activity){
+    quest.activity.forEach(function(a){
+      displayHp-= (parseInt(a.duration) * 10);
+    });
+  }
 
-  res.render('quest', { layout: 'sidebar_layout' , quest: quest});
+  res.render('quest', { layout: 'sidebar_layout' , quest: quest, displayHp: displayHp});
 });
 
 router.post('/:quest', function(req, res, next) {
