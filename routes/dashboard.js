@@ -11,7 +11,13 @@ router.post('/', function(req, res, next) {
   var quest = sesh.quests[sesh.quests.length - 1];
   quest.friends = req.body.friends;
 
-  res.render('dashboard', { layout: 'sidebar_layout' , quest: quest });
+  res.render('dashboard', {
+    layout: 'sidebar_layout' ,
+    active: sesh.quests.filter(function (elem) { return elem.state === 'active'; }),
+    pending: sesh.quests.filter(function (elem) { return elem.state === 'pending'; }),
+    ignored: sesh.quests.filter(function (elem) { return elem.state === 'ignored'; }),
+    completed: sesh.quests.filter(function (elem) { return elem.state === 'completed'; })
+  });
 });
 
 module.exports = router;

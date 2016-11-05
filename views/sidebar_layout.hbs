@@ -104,33 +104,28 @@
 
                                 <li>
                                     <a href="/">ACTIVE</a>
-
-                                    <a class="quest-name" href="/">#questActiveName1</a>
-
-                                    <a class="quest-name" href="/">#questActiveName2</a>
-
+                                    {{#each active}}
+                                    <a class="quest-name" href="/quest/{{this.hashtag}}">{{this.hashtag}}</a>
+                                    {{/each}}
                                 </li>
                                  <li>
                                     <a href="/">PENDING</a>
-
-                                    <a class="quest-name" href="/">#questPendingName1</a>
-
-
+                                    {{#each pending}}
+                                    <a class="quest-name" href="/quest/{{this.hashtag}}">{{this.hashtag}}</a>
+                                    {{/each}}
                                 </li>
                                  <li>
                                     <a href="/">IGNORED</a>
-
-                                    <a class="quest-name" href="/">#questIgnoredName1</a>
+                                    {{#each ignored}}
+                                    <a class="quest-name" href="/quest/{{this.hashtag}}">{{this.hashtag}}</a>
+                                    {{/each}}
                                 </li>
-
                                  <li>
                                     <a href="/">COMPLETED</a>
-
-                                    <a class="quest-name" href="/">#questCompletedName1</a>
+                                    {{#each completed}}
+                                    <a class="quest-name" href="/quest/{{this.hashtag}}">{{this.hashtag}}</a>
+                                    {{/each}}
                                 </li>
-
-
-
                             </ul>
                             <!-- /.nav-second-level -->
                         </li>

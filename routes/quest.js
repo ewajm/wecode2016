@@ -19,7 +19,15 @@ router.get('/:quest', function(req, res, next) {
     });
   }
 
-  res.render('quest', { layout: 'sidebar_layout' , quest: quest, displayHp: displayHp});
+  res.render('quest', {
+    layout: 'sidebar_layout' ,
+    quest: quest,
+    displayHp: displayHp,
+    active: sesh.quests.filter(function (elem) { return elem.state === 'active'; }),
+    pending: sesh.quests.filter(function (elem) { return elem.state === 'pending'; }),
+    ignored: sesh.quests.filter(function (elem) { return elem.state === 'ignored'; }),
+    completed: sesh.quests.filter(function (elem) { return elem.state === 'completed'; })
+  });
 });
 
 router.post('/:quest', function(req, res, next) {
@@ -39,8 +47,20 @@ router.post('/:quest', function(req, res, next) {
     displayHp-= (parseInt(a.duration) * 10);
   });
   var template = 'quest'; // reload the page by default
+
   if( displayHp <= 0 ) { template = 'win'; } //
-  res.render(template, { layout: 'sidebar_layout' , quest: quest, displayHp: displayHp, activities: quest.activity});
+  res.render(template, { layout: 'sidebar_layout' , quest: quest, });
+  if( quest.hp <= 0 ) { template = 'win'; } //
+  res.render(template, {
+    layout: 'sidebar_layout' ,
+    quest: quest,
+    displayHp: displayHp,
+    activities: quest.activity,
+    active: sesh.quests.filter(function (elem) { return elem.state === 'active'; }),
+    pending: sesh.quests.filter(function (elem) { return elem.state === 'pending'; }),
+    ignored: sesh.quests.filter(function (elem) { return elem.state === 'ignored'; }),
+    completed: sesh.quests.filter(function (elem) { return elem.state === 'completed'; })
+  });
 });
 
 module.exports = router;
