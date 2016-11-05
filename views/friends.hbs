@@ -1,1 +1,13 @@
-<h1>ohai</h1>
+<h1>Keep Your Friends Close...</h1>
+
+<h2>Select up to 9 friend to band together and try to defeat the Burrito Monster!</h2>
+
+<form method="POST" action="dashboard">
+    <ul id="picker">
+        {{#each friends}}
+            <li><label><input type="checkbox" id="{{this.id}}" value="{{this.value}}">{{this.name}}</label></li>
+        {{/each}}
+    </ul>
+
+    <input type="submit" value="LET'S SLAY!" />
+</form>
