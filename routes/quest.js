@@ -32,7 +32,6 @@ router.post('/:quest', function(req, res, next) {
   quest.activity.forEach(function(a){
     displayHp-= (parseInt(a.duration) * 10);
   });
-
   var template = 'quest'; // reload the page by default
   if( displayHp <= 0 ) { template = 'win'; } //
   res.render(template, { layout: 'sidebar_layout' , quest: quest, displayHp: displayHp, activities: quest.activity});

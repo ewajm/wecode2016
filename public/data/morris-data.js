@@ -64,13 +64,44 @@ $(function() {
     Morris.Donut({
         element: 'morris-donut-chart',
         data: [{
-            label: "Download Sales",
+            label: "Defeating Burrito Monster",
             value: 12
         }, {
-            label: "In-Store Sales",
+            label: "Defeating Burrito Monster",
             value: 30
         }, {
-            label: "Mail-Order Sales",
+            label: "Defeating Burrito Monster",
+            value: 20
+        }],
+        resize: true
+    });
+
+        Morris.Donut({
+        element: 'morris-donut-chart-two',
+        data: [{
+            label: "Defeating Burrito Monster",
+            value: 25
+        }, {
+            label: "Defeating Burrito Monster",
+            value: 30
+        }, {
+            label: "Defeating Burrito Monster",
+            value: 20
+        }],
+        resize: true
+    });
+
+
+        Morris.Donut({
+        element: 'morris-donut-chart-three',
+        data: [{
+            label: "Defeating Burrito Monster",
+            value: 45
+        }, {
+            label: "Defeating Burrito Monster",
+            value: 30
+        }, {
+            label: "Defeating Burrito Monster",
             value: 20
         }],
         resize: true
