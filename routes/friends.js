@@ -15,13 +15,13 @@ router.post('/', function(req, res, next) {
       },
       {
         id: 2,
-        value: "dr_who",
-        name: "Doctor Who"
+        value: "dr_crusher",
+        name: "Doctor Crusher"
       },
       {
         id: 3,
-        value: "dr_welby",
-        name: "Doctor Marcus Welby MD"
+        value: "dr_isley",
+        name: "Doctor Isley"
       },
       {
         id: 4,
@@ -31,7 +31,7 @@ router.post('/', function(req, res, next) {
       {
         id: 5,
         value: "dr_suess",
-        name: "Doctor Suess"
+        name: "Doctor Seuss"
       },
       {
         id: 6,
@@ -40,8 +40,8 @@ router.post('/', function(req, res, next) {
       },
       {
         id: 7,
-        value: "dr_frankenstein",
-        name: "Doctor Frankenstein"
+        value: "dr_goodall",
+        name: "Doctor Jane Goodall"
       },
       {
         id: 8,
@@ -50,8 +50,8 @@ router.post('/', function(req, res, next) {
       },
       {
         id: 9,
-        value: "dr_jekyll",
-        name: "Doctor Jekyll"
+        value: "dr_quinn_medicine_woman",
+        name: "Doctor Quinn Medicine Woman"
       }
     ]
   });
