@@ -5,4 +5,9 @@ var router = express.Router();
 //   res.render('twitter');
 // });
 
+router.post('/', function(req, res, next) {
+  
+  res.render('friends');
+});
+
 module.exports = router;

@@ -1,5 +1,5 @@
 <h1>What did you do to help defeat the Burrito Monster?</h1>
-<form action="index.html" method="post">
+<form action="/quest" method="post">
   <div class="form-group">
     <select class='form-control' name='quest' id='quest'>
       <option value='1'>Walked</option>
@@ -15,8 +15,13 @@
     </select>
   </div>
   <div class="form-group">
-    <label for="duration">How long</label>
-    <input type="date" name="start" id='start'  class='form-control'>
+    <label for="duration">How long did you do the thing?</label>
+    <select class='form-control' name='quest' id='quest'>
+      <option value='1'>Once, obviously</option>
+      <option value='2'>Up to 15 minutes</option>
+      <option value="3">15-45 minutes</option>
+      <option value='4'>1 hour</option>
+      <option value='5'>Over an hour</option>
   </div>
-  <button type="submit" name="button"></button>
+  <button type="submit" name="button">FIGHT THAT BURRITO</button>
 </form>
