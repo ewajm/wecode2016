@@ -6,6 +6,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var index = require('./routes/index');
+var twitter = require('./routes/twitter');
 var users = require('./routes/users');
 
 var app = express();
@@ -25,6 +26,7 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 // routes
 app.use('/', index);
+app.use('/twitter', twitter);
 app.use('/users', users);
 app.use('/join', join);
 app.use('/twitter', twitter);
