@@ -68,7 +68,7 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-// quests: [
+// var quests: [
 //   {
 //     id: 1,
 //     hashtag: "#active1",

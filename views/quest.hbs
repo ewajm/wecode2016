@@ -1,33 +1,50 @@
-<h1>{{quest.hashtag}}</h1>
+<div class="row">
+  <div class="col-sm-8">
+    <h1>{{quest.hashtag}}</h1>
+    <h2> Burrito Monster Status: {{displayHp}} HP</h2>
+    <h1>friends</h1>
+    <ul>
+    {{#each quest.friends}}
+    <li>{{this}}</li>
+    {{/each}}
+    </ul>
 
-<h1>What did you do to help defeat the Burrito Monster?</h1>
+    <h1>What did you do to help defeat the Burrito Monster?</h1>
 
-{{post}}
-
-<form action="/quest/{{quest.hashtag}}" method="post">
-    <div class="form-group">
-        <select class='form-control' name='quest' id='quest'>
-            <option value='1'>Walked</option>
-            <option value='2'>Ran</option>
-            <option value="3">Cycled</option>
-            <option value='4'>Stood instead of sat</option>
-            <option value='5'>Took my vitamins</option>
-            <option value="6">Drank a METRIC TON of water</option>
-            <option value='7'>Aerobic workout at gym</option>
-            <option value='8'>Meditated</option>
-            <option value="9">Did yoga</option>
-            <opton value='10'>Slept 8 or more hours</option>
-        </select>
-    </div>
-    <div class="form-group">
-        <label for="duration">How long did you do the thing?</label>
-        <select class='form-control' name='quest' id='quest'>
-            <option value='1'>Once, obviously</option>
-            <option value='2'>Up to 15 minutes</option>
-            <option value="3">15-45 minutes</option>
-            <option value='4'>1 hour</option>
-            <option value='5'>Over an hour</option>
-        </select>
-    </div>
-    <button type="submit" name="button">FIGHT THAT BURRITO</button>
-</form>
+    <form action="/quest/{{quest.hashtag}}" method="post">
+        <div class="form-group">
+            <select class='form-control' name='activity' id='activity'>
+                <option>Walked</option>
+                <option>Ran</option>
+                <option>Cycled</option>
+                <option>Stood instead of sat</option>
+                <option>Took my vitamins</option>
+                <option>Drank a METRIC TON of water</option>
+                <option>Aerobic workout at gym</option>
+                <option>Meditated</option>
+                <option>Did yoga</option>
+                <opton>Slept 8 or more hours</option>
+            </select>
+        </div>
+        <div class="form-group">
+            <label for="duration">How long did you do the thing?</label>
+            <select class='form-control' name='duration' id='duration'>
+                <option value='1'>Once, obviously</option>
+                <option value='2'>Up to 15 minutes</option>
+                <option value="3">15-45 minutes</option>
+                <option value='4'>1 hour</option>
+                <option value='5'>Over an hour</option>
+            </select>
+        </div>
+        <button type="submit" name="button">FIGHT THAT BURRITO</button>
+    </form>
+  </div>
+  <div class="col-sm-4">
+    <h4>{{quest.hashtag}} activity</h4>
+    <ul>
+      {{#each activities as |activity|}}
+        <li>{{activity.name}} {{activity.value}}</li>
+      {{/each}}
+    </ul>
+  </div>
+</div>
