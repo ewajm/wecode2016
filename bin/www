@@ -25,6 +25,10 @@ var server = http.createServer(app);
  * Listen on provided port, on all network interfaces.
  */
 
+console.log("Get ready to SLAY some burritos!")
+console.log("");
+console.log("Go to http://localhost:3000 to get started!");
+
 server.listen(port);
 server.on('error', onError);
 server.on('listening', onListening);
