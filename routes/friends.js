@@ -1,11 +1,33 @@
-var express = require('express');
-var router = express.Router();
+var express    = require('express');
+var router     = express.Router();
+var app        = express();
+var bodyParser = require('body-parser');
+
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 router.get('/', function(req, res, next) {
   res.render('friends' );
 });
 
 router.post('/', function(req, res, next) {
+  var sesh = req.session;
+
+  // make a quest from the stuff on the previous page...
+  var quest = {
+    activity: [],
+    friends: [],
+    leader: sesh.name ,
+    hashtag: req.body.hashtag,
+    start: req.body.start,
+    type: req.body.quest,
+    state: 'active'
+  };
+
+  //...and store it from the session
+  sesh.quests ? sesh.quests.push(quest) : sesh.quests = [ quest ];
+
+  //
   res.render('friends', {
     friends: [
       {
