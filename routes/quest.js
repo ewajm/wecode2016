@@ -18,11 +18,12 @@ router.get('/:quest', function(req, res, next) {
       displayHp-= (parseInt(a.duration) * 10);
     });
   }
-
+  
   res.render('quest', {
     layout: 'sidebar_layout' ,
     quest: quest,
     displayHp: displayHp,
+    activities: quest.activity,
     active: sesh.quests.filter(function (elem) { return elem.state === 'active'; }),
     pending: sesh.quests.filter(function (elem) { return elem.state === 'pending'; }),
     ignored: sesh.quests.filter(function (elem) { return elem.state === 'ignored'; }),
