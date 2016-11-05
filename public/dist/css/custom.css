@@ -2,6 +2,7 @@
 	color: #053162;
 	font-size: 5em;
 }
+
 .welcome {
 	color: #053162;
 	margin: 20px auto;
@@ -54,3 +55,11 @@ body {
 div.container-fluid {
 	background-color: transparent;
 }
+
+ .win {
+ 	text-align:center;
+ }
+
+ .win .btn {
+ 	margin: 10px auto;
+ }

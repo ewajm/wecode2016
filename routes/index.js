@@ -8,7 +8,7 @@ router.get('/', function(req, res, next) {
   sesh.quests = [
     {
       id: 1,
-      hashtag: "#active1",
+      hashtag: "active1",
       start_date: "11/04/2016",
       type: "weekly",
       leader: "Doctor Jane Goodall",
@@ -36,7 +36,7 @@ router.get('/', function(req, res, next) {
     },
     {
       id: 2,
-      hashtag: "#pending1",
+      hashtag: "pending1",
       start_date: "12/04/2016",
       type: "daily",
       leader: "Doctor Quinn Meidine Woman",
@@ -49,7 +49,7 @@ router.get('/', function(req, res, next) {
     },
     {
       id: 3,
-      hashtag: "#ignored1",
+      hashtag: "ignored1",
       start_date:"10/03/2016",
       type: "weekly",
       leader: "Doctor Demento",
@@ -62,7 +62,7 @@ router.get('/', function(req, res, next) {
     },
     {
       id: 4,
-      hashtag: "#completed1",
+      hashtag: "completed1",
       start_date: "09/08/2016",
       type: "daily",
       leader: "Doctor Zhivago",
