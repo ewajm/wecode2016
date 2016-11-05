@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 router.get('/', function(req, res, next) {
+  // have code here to fetch friends list from twitter
   res.render('friends', {
     friends: [
       {
