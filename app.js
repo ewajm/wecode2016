@@ -5,16 +5,21 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
-var index = require('./routes/index');
-var twitter = require('./routes/twitter');
-var users = require('./routes/users');
+var index     = require('./routes/index');
+var twitter   = require('./routes/twitter');
+var join      = require('./routes/join');
+var pick      = require('./routes/pick');
+var friends   = require('./routes/friends');
+var dashboard = require('./routes/dashboard');
+var quest     = require('./routes/quest');
+var add       = require('./routes/add');
+var end       = require('./routes/end');
 
 var app = express();
 
 // view engine setup
 app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'hbs');
-app.set('test',test);
 
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
@@ -27,7 +32,6 @@ app.use(express.static(path.join(__dirname, 'public')));
 // routes
 app.use('/', index);
 app.use('/twitter', twitter);
-app.use('/users', users);
 app.use('/join', join);
 app.use('/twitter', twitter);
 app.use('/pick', pick);
