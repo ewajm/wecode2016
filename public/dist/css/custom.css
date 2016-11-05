@@ -1,31 +1,33 @@
 .welcome h1 {
-	color: navy;
+	color: #053162;
+	font-size: 5em;
 }
 .welcome {
+	color: #053162;
 	margin: 20px auto;
-	text-align:center; 
+	text-align:center;
 	border-radius: 20px;
 	padding: 20px;
 }
 
 #formWelcomeName {
-	width: 75%;
+	width: 250px;
 	margin: 10px auto;
 }
 
 .welcome .btn {
-	background-color: navy;
+	background-color: #053162;
 	color: white;
 	padding:10px 100px;
 }
-	
+
 a.quest-name {
     margin-left: 20px;
     font-size: 12px;
 }
 
 li.add-quest{
-	background-color: navy;	
+	background-color: navy;
 }
 
 li.add-quest a {
@@ -39,4 +41,16 @@ li.add-quest a:hover {
 
 li.add-quest i {
 	padding: 10px;
+}
+
+body {
+  background: url(images/burritofade.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+}
+
+div.container-fluid {
+	background-color: transparent;
 }
