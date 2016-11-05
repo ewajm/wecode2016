@@ -20,10 +20,10 @@ router.post('/:quest', function(req, res, next) {
 
   // FIXME|TODO look at the stuff that was posted and subtract the HP
   // and detect whether or not the monster has been killed
-  var activity = get_the_activity; // fixme
-  var duration = get_the_duration; // fixme
-  var damage   = activity * duration; // fixme
-  quest.hp -= damage;
+  // var activity = get_the_activity; // fixme
+  // var duration = get_the_duration; // fixme
+  // var damage   = activity * duration; // fixme
+  quest.hp -= 50;
 
   var template = 'quest'; // reload the page by default
   if( quest.hp <= 0 ) { template = 'win'; } //
