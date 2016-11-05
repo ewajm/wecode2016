@@ -17,3 +17,12 @@ Enough about that I wanna slay some burrito monsters already geez
 2. From the root level of this repo, run `bin/www`
 3. Go to [http://localhost:3000](http://localhost:3000)
 4. Kick ass!
+
+colors:
+light blue: #00BDF7
+dark blue: #053162
+gold: #FFD01D
+maroon: #6E0820
+blue-green: #284356
+pink: #E9A8BE
+teal: #468C82
