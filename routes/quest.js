@@ -12,10 +12,11 @@ router.get('/:quest', function(req, res, next) {
   var sesh = req.session;
 
   var quest = req.session.quests.find(rightQuest);
+
   var displayHp = parseInt(quest.hp);
   if(quest.activity){
     quest.activity.forEach(function(a){
-      displayHp-= (parseInt(a.duration) * 10);
+      displayHp-= (parseInt(a.duration) * 50);
     });
   }
   
@@ -41,17 +42,19 @@ router.post('/:quest', function(req, res, next) {
     value: req.body.activity,
     duration: req.body.duration,
     name: sesh.name
-  }
+  };
+
   quest.activity.push(activity);
   var displayHp = parseInt(quest.hp);
   quest.activity.forEach(function(a){
-    displayHp-= (parseInt(a.duration) * 10);
+    displayHp-= (parseInt(a.duration) * 50);
   });
-  var template = 'quest'; // reload the page by default
 
-  if( displayHp <= 0 ) { template = 'win'; } //
-  res.render(template, { layout: 'sidebar_layout' , quest: quest, });
-  if( quest.hp <= 0 ) { template = 'win'; } //
+  var template = 'quest'; // reload the page by default
+  if( displayHp <= 0 ) {
+    template = 'win';
+    quest.state = 'completed';
+  }
   res.render(template, {
     layout: 'sidebar_layout' ,
     quest: quest,
