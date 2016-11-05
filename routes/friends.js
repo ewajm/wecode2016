@@ -21,7 +21,8 @@ router.post('/', function(req, res, next) {
     hashtag: req.body.hashtag,
     start: req.body.start,
     type: req.body.quest,
-    state: 'active'
+    state: 'active',
+    hp: '100'  // TODO|FIXME: set default HP based on something
   };
 
   //...and store it from the session
