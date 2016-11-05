@@ -5,7 +5,7 @@
 <form method="POST" action="dashboard">
     <ul id="picker">
         {{#each friends}}
-            <li><label><input type="checkbox" id="{{this.id}}" value="{{this.value}}">{{this.name}}</label></li>
+            <li><label><input type="checkbox" id="{{this.id}}" name="friends" value="{{this.value}}">{{this.name}}</label></li>
         {{/each}}
     </ul>
 

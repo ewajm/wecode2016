@@ -18,3 +18,25 @@
 	color: white;
 	padding:10px 100px;
 }
+	
+a.quest-name {
+    margin-left: 20px;
+    font-size: 12px;
+}
+
+li.add-quest{
+	background-color: navy;	
+}
+
+li.add-quest a {
+	color: white;
+}
+
+li.add-quest a:hover {
+	color: navy;
+	background-color: #e7e7e7;
+}
+
+li.add-quest i {
+	padding: 10px;
+}
